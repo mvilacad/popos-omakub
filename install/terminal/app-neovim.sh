@@ -7,8 +7,11 @@ sudo cp -R nvim-linux-x86_64/share /usr/local/
 rm -rf nvim-linux-x86_64 nvim.tar.gz
 cd -
 
-# Install luarocks and tree-sitter-cli to resolve lazyvim :checkhealth warnings
-sudo apt install -y luarocks tree-sitter-cli
+# Install luarocks and to resolve lazyvim :checkhealth warnings
+sudo apt install -y luarocks
+
+# Install tree-sitter-cli to resolve lazyvim :checkhealth warnings
+source ~/.local/share/omakub/install/terminal/tool-tree-sitter-cli.sh
 
 # Only attempt to set configuration if Neovim has never been run
 if [ ! -d "$HOME/.config/nvim" ]; then
